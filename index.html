@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<!--
+  ╔══════════════════════════════════════════════════════════════╗
+  ║              EdLearn - Online Education Platform             ║
+  ║   Clone of theedtraining.com — Redesigned with creativity   ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  WHAT IS DOCTYPE html?
+  → Tells the browser: "This is a modern HTML5 page."
+  → Always write this as the VERY FIRST line.
+
+  WHAT IS <html lang="en">?
+  → Root element of every webpage.
+  → lang="en" tells search engines & screen readers the language.
+-->
+<html lang="en">
+
+<head>
+  <!--
+    ══════════════════════════════════════════
+    HEAD SECTION — Hidden from the user
+    Everything here sets up the page but
+    doesn't show on screen directly.
+    ══════════════════════════════════════════
+  -->
+
+  <!-- charset: supports all letters, emojis, symbols -->
+  <meta charset="UTF-8">
+
+  <!-- viewport: makes the site look correct on mobile phones -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Page title shown in browser tab -->
+  <title>Edspark — Shape Your Future</title>
+
+  <!-- Google Fonts: loads 2 beautiful fonts from the internet -->
+  <!-- Playfair Display = headlines | Nunito = body text -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+
+  <!-- Link to our main CSS file (styles everything) -->
+  <link rel="stylesheet" href="css/style.css">
+
+  <!-- Link to our animations CSS file -->
+  <link rel="stylesheet" href="css/animations.css">
+
+</head>
+
+<body>
+  <!--
+    ══════════════════════════════════════════
+    BODY SECTION — Everything visible to user
+    We break the page into sections/blocks.
+    ══════════════════════════════════════════
+  -->
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 1: NAVBAR (Navigation Bar)
+       PURPOSE: Top bar with logo + menu links
+       ════════════════════════════════════════ -->
+  <nav class="navbar" id="navbar">
+    <!-- Logo area -->
+    <div class="nav-logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Ed<span class="logo-accent">Spark</span></span>
+    </div>
+
+    <!-- Hamburger icon for MOBILE (3 lines = ☰) -->
+    <!-- This is hidden on desktop, visible on mobile -->
+    <div class="hamburger" id="hamburger" aria-label="Toggle menu">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+
+    <!-- Navigation links -->
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home" class="nav-link active">Home</a></li>
+      <li class="dropdown">
+        <a href="#courses" class="nav-link">Courses ▾</a>
+        <!-- DROPDOWN MENU — appears on hover -->
+        <div class="dropdown-menu">
+          <a href="#courses">Grade 8 – 10 (All Boards)</a>
+          <a href="#courses">Grade 11 – 12 / PUC</a>
+          <a href="#courses">Competitive Exams</a>
+        </div>
+      </li>
+      <li class="dropdown">
+        <a href="#subscription" class="nav-link">Subscription ▾</a>
+        <div class="dropdown-menu">
+          <a href="#subscription">CBSE</a>
+          <a href="#subscription">ICSE</a>
+          <a href="#subscription">Other Boards</a>
+        </div>
+      </li>
+      <li><a href="#homeschool" class="nav-link">Home Schooling</a></li>
+      <li><a href="#about" class="nav-link">About Us</a></li>
+      <li><a href="#contact" class="nav-link">Contact</a></li>
+    </ul>
+
+    <!-- Right side: Dark mode toggle + CTA button -->
+    <div class="nav-actions">
+      <!-- Dark Mode Toggle Button -->
+      <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark/light mode">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+      <!-- CTA = Call To Action button -->
+      <a href="#contact" class="btn btn-primary nav-cta">Get Demo Class</a>
+    </div>
+  </nav>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 2: HERO SECTION
+       PURPOSE: Big banner at top of homepage
+       Shows headline, tagline, and CTA buttons
+       ════════════════════════════════════════ -->
+  <section class="hero" id="home">
+
+    <!-- Animated floating shapes (pure CSS art) -->
+    <div class="hero-shapes">
+      <div class="shape shape-1"></div>
+      <div class="shape shape-2"></div>
+      <div class="shape shape-3"></div>
+      <div class="shape shape-4"></div>
+    </div>
+
+    <!-- Hero content (text + buttons) -->
+    <div class="hero-content">
+      <!-- Small badge above headline -->
+      <div class="hero-badge animate-fadeup">🚀 Trusted by 5000+ Students</div>
+
+      <!-- Main Big Headline -->
+      <h1 class="hero-title animate-fadeup delay-1">
+        Shape Your <span class="title-highlight">Future</span><br>
+        Learn Without <span class="title-underline">Limits</span>
+      </h1>
+
+      <!-- Sub-text below headline -->
+      <p class="hero-subtitle animate-fadeup delay-2">
+        Expert-led online tuitions for Grade 8–12 across all boards.<br>
+        Personalized. Flexible. Affordable.
+      </p>
+
+      <!-- Two buttons side by side -->
+      <div class="hero-buttons animate-fadeup delay-3">
+        <a href="#courses" class="btn btn-primary btn-large">Explore Courses</a>
+        <a href="#contact" class="btn btn-outline btn-large">Book Free Demo</a>
+      </div>
+
+      <!-- Stats row (numbers that impress) -->
+      <div class="hero-stats animate-fadeup delay-4">
+        <div class="stat-item">
+          <span class="stat-number" data-target="5000">0</span><span>+</span>
+          <span class="stat-label">Students</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="50">0</span><span>+</span>
+          <span class="stat-label">Expert Tutors</span>
+        </div>
+        <div class="stat-divider"></div>
+        <div class="stat-item">
+          <span class="stat-number" data-target="95">0</span><span>%</span>
+          <span class="stat-label">Success Rate</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- Hero image / illustration side -->
+    <div class="hero-visual animate-fadein delay-2">
+      <div class="hero-card-float card-1">
+        <span>🔴</span> Live Classes
+      </div>
+      <div class="hero-image-wrapper">
+        <!-- Using a reliable free image from Unsplash -->
+        <img
+          src="https://images.unsplash.com/photo-1523240795612-9a054b0db644?w=600&q=80"
+          alt="Students learning online"
+          class="hero-img"
+          loading="lazy"
+        >
+      </div>
+      <div class="hero-card-float card-2">
+        <span>🏆</span> Top Ranked
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 3: MARQUEE / TICKER STRIP
+       PURPOSE: Scrolling text banner (eye-catcher)
+       ════════════════════════════════════════ -->
+  <div class="marquee-wrapper">
+    <div class="marquee-track">
+      <!-- This text repeats to create infinite scroll illusion -->
+      <span> CBSE &nbsp;•&nbsp; ICSE &nbsp;•&nbsp; State Boards &nbsp;•&nbsp; IIT JEE &nbsp;•&nbsp; NEET &nbsp;•&nbsp; NTSE &nbsp;•&nbsp; Olympiad &nbsp;•&nbsp; KCET &nbsp;•&nbsp; Home Schooling &nbsp;•&nbsp; Live Doubt Clearing &nbsp;•&nbsp;</span>
+      <span> CBSE &nbsp;•&nbsp; ICSE &nbsp;•&nbsp; State Boards &nbsp;•&nbsp; IIT JEE &nbsp;•&nbsp; NEET &nbsp;•&nbsp; NTSE &nbsp;•&nbsp; Olympiad &nbsp;•&nbsp; KCET &nbsp;•&nbsp; Home Schooling &nbsp;•&nbsp; Live Doubt Clearing &nbsp;•&nbsp;</span>
+      <span> CBSE &nbsp;•&nbsp; ICSE &nbsp;•&nbsp; State Boards &nbsp;•&nbsp; IIT JEE &nbsp;•&nbsp; NEET &nbsp;•&nbsp; NTSE &nbsp;•&nbsp; Olympiad &nbsp;•&nbsp; KCET &nbsp;•&nbsp; Home Schooling &nbsp;•&nbsp; Live Doubt Clearing &nbsp;•&nbsp;</span>
+    </div>
+  </div>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 4: VALUES / WHY US SECTION
+       PURPOSE: 4 value cards showing key benefits
+       ════════════════════════════════════════ -->
+  <section class="values-section" id="about">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Our Philosophy</span>
+        <h2 class="section-title">Why <span class="highlight">EdSpark</span> Works</h2>
+        <p class="section-sub">We combine personalized mentoring with structured academics to unlock every student's potential.</p>
+      </div>
+
+      <!-- 4 value cards in a grid -->
+      <div class="values-grid">
+
+        <div class="value-card animate-on-scroll">
+          <div class="value-icon"><center><img src="https://img.icons8.com/?size=100&id=0HAGNdamoJug&format=png&color=000000" alt=""></center></div>
+          <h3>Personalized Learning</h3>
+          <p>Every student gets a custom study plan tailored to their pace, board, and career goals.</p>
+        </div>
+
+        <div class="value-card animate-on-scroll delay-1">
+          <div class="value-icon"><center><img src="https://img.icons8.com/?size=100&id=112286&format=png&color=000000" alt=""></center></div>
+          <h3>Concept-First Teaching</h3>
+          <p>We don't just teach syllabus — we build strong fundamentals that last a lifetime.</p>
+        </div>
+
+        <div class="value-card animate-on-scroll delay-2">
+          <div class="value-icon"><center><img src="https://img.icons8.com/?size=100&id=102716&format=png&color=000000" alt=""></center></div>
+          <h3>Flexible Scheduling</h3>
+          <p>Morning, evening, weekends — learn when YOU are most productive, not when the school bell rings.</p>
+        </div>
+
+        <div class="value-card animate-on-scroll delay-3">
+          <div class="value-icon"><center><img src="https://img.icons8.com/?size=100&id=113854&format=png&color=000000" alt=""></center></div>
+          <h3>Pay-as-You-Learn</h3>
+          <p>Subscription model means you only pay for what you use. No hidden fees, no pressure.</p>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 5: COURSES SECTION
+       PURPOSE: Show different course categories
+       ════════════════════════════════════════ -->
+  <section class="courses-section" id="courses">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">What We Offer</span>
+        <h2 class="section-title">Our <span class="highlight">Courses</span></h2>
+        <p class="section-sub">From foundational academics to competitive exam mastery — we've got you covered.</p>
+      </div>
+
+      <!-- Course cards grid -->
+      <div class="courses-grid">
+
+        <!-- Course Card 1 -->
+        <div class="course-card animate-on-scroll">
+          <div class="course-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1580582932707-520aed937b7b?w=500&q=80" alt="Academic Courses" loading="lazy">
+            <div class="course-badge">Most Popular</div>
+          </div>
+          <div class="course-body">
+            <div class="course-icon"><img src="https://img.icons8.com/?size=100&id=J2t_uKtMD3D7&format=png&color=000000" style="height: 4rem; width: 4rem;" alt=""></div>
+            <h3>Grade 8 – 10 (All Boards)</h3>
+            <p>Maths, Science, English, Social Science — complete curriculum coverage with live doubt sessions.</p>
+            <ul class="course-features">
+              <li>✅ CBSE / ICSE / State Board</li>
+              <li>✅ Live + Recorded Classes</li>
+              <li>✅ Weekly Mock Tests</li>
+            </ul>
+            <a href="course-grade8.html" class="btn btn-primary btn-block">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Course Card 2 -->
+        <div class="course-card animate-on-scroll delay-1">
+          <div class="course-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80"  alt="Senior Secondary" loading="lazy">
+            <div class="course-badge badge-purple">New Batch</div>
+          </div>
+          <div class="course-body">
+            <div class="course-icon"><img src="https://img.icons8.com/?size=100&id=5GV30Lm2m7oX&format=png&color=000000" style="height: 4rem; width: 4rem;" alt="Senior Secondary" loading="lazy"></div>
+            <h3>Grade 11 – 12 / PUC</h3>
+            <p>Science, Commerce & Arts streams. Board exam + entrance exam preparation combined.</p>
+            <ul class="course-features">
+              <li>✅ PCM / PCB / Commerce</li>
+              <li>✅ Board + JEE/NEET Prep</li>
+              <li>✅ Expert Mentors</li>
+            </ul>
+            <a href="course-grade11.html" class="btn btn-primary btn-block">Read More →</a>
+          </div>
+        </div>
+
+        <!-- Course Card 3 -->
+        <div class="course-card animate-on-scroll delay-2">
+          <div class="course-img-wrapper">
+            <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="Competitive Exams" loading="lazy">
+            <div class="course-badge badge-gold">Premium</div>
+          </div>
+          <div class="course-body">
+            <div class="course-icon"><img src="https://img.icons8.com/?size=100&id=111604&format=png&color=000000" style="height: 4rem; width: 4rem;" alt=""></div>
+            <h3>Competitive Exams</h3>
+            <p>JEE, NEET, NTSE, Olympiad, KCET — rigorous training with strategy sessions and mock tests.</p>
+            <ul class="course-features">
+              <li>✅ Test Series Included</li>
+              <li>✅ Performance Analytics</li>
+              <li>✅ 1-on-1 Strategy Sessions</li>
+            </ul>
+            <a href="course-competitive.html" class="btn btn-primary btn-block">Read More →</a>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 6: HOME SCHOOLING SECTION
+       PURPOSE: Promote home schooling program
+       Uses a split 2-column layout
+       ════════════════════════════════════════ -->
+  <section class="homeschool-section" id="homeschool">
+    <div class="container">
+      <div class="split-layout">
+
+        <!-- Left: Image side -->
+        <div class="split-visual animate-on-scroll">
+          <img src="https://images.unsplash.com/photo-1503676260728-1c00da094a0b?w=600&q=80" alt="Home schooling student" loading="lazy" class="split-img">
+          <!-- Floating info card on image -->
+          <div class="floating-stat">
+            <span class="fs-number">500+</span>
+            <span class="fs-label">Home Schooled Students</span>
+          </div>
+        </div>
+
+        <!-- Right: Text side -->
+        <div class="split-content animate-on-scroll delay-1">
+          <span class="section-tag">Alternative Education</span>
+          <h2 class="section-title">🏡 Home Schooling <span class="highlight">Program</span></h2>
+          <p>Designed for self-paced learners or students seeking a flexible alternative to traditional schools. EdLearn's home schooling program gives your child individual attention with guided progress tracking.</p>
+
+          <div class="feature-list">
+            <div class="feature-item">
+              <span class="feature-dot"></span>
+              <span>Custom curriculum aligned with national standards</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-dot"></span>
+              <span>Flexible timetable — you set the schedule</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-dot"></span>
+              <span>Monthly progress reports for parents</span>
+            </div>
+            <div class="feature-item">
+              <span class="feature-dot"></span>
+              <span>Ideal for students with special needs or travel</span>
+            </div>
+          </div>
+
+          <a href="#contact" class="btn btn-primary">Learn More About Home Schooling</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 7: SUBSCRIPTION SECTION
+       PURPOSE: 3 pricing/subscription plan cards
+       ════════════════════════════════════════ -->
+  <section class="subscription-section" id="subscription">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Flexible Plans</span>
+        <h2 class="section-title">Choose Your <span class="highlight">Subscription</span></h2>
+        <p class="section-sub">Pay only for what you need. Upgrade or pause anytime.</p>
+      </div>
+
+      <div class="plans-grid">
+
+        <!-- Plan 1: CBSE -->
+        <div class="plan-card animate-on-scroll">
+          <div class="plan-header">
+            <span class="plan-icon"><center><img src="https://img.icons8.com/?size=100&id=114498&format=png&color=000000" style="height: 5rem; width: 5rem" alt=""></center></span>
+            <h3>CBSE Plan</h3> 
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">999</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ All CBSE Subjects</li>
+            <li>✅ Recorded Lectures</li>
+            <li>✅ Chapter-wise Tests</li>
+            <li>✅ Doubt Clearing (2x/week)</li>
+            <li>⬜ Live Classes</li>
+            <li>⬜ Mentor Assignment</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Subscribe</a>
+        </div>
+
+        <!-- Plan 2: ICSE (Featured/Recommended) -->
+        <div class="plan-card plan-featured animate-on-scroll delay-1">
+          <div class="plan-popular-badge">⭐ Most Popular</div>
+          <div class="plan-header">
+            <span class="plan-icon"><center><img src="https://img.icons8.com/?size=100&id=114500&format=png&color=000000" style="height: 5rem; width: 5rem;" alt=""></center></span>
+            <h3>ICSE Plan</h3>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">1499</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ All ICSE Subjects</li>
+            <li>✅ Live + Recorded Classes</li>
+            <li>✅ Chapter-wise + Full Tests</li>
+            <li>✅ Doubt Clearing (Daily)</li>
+            <li>✅ Personal Mentor</li>
+            <li>⬜ Parent Reports</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary btn-block">Subscribe</a>
+        </div>
+
+        <!-- Plan 3: All Boards -->
+        <div class="plan-card animate-on-scroll delay-2">
+          <div class="plan-header">
+            <span class="plan-icon"><center><img src="https://img.icons8.com/?size=100&id=111275&format=png&color=000000" style="height: 5rem; width: 5rem" alt=""></center></span>
+            <h3>All Boards Plan</h3>
+            <div class="plan-price">
+              <span class="currency">₹</span>
+              <span class="amount">1999</span>
+              <span class="period">/month</span>
+            </div>
+          </div>
+          <ul class="plan-features">
+            <li>✅ Any Board, Any Subject</li>
+            <li>✅ Live + Recorded Classes</li>
+            <li>✅ Full Test Series</li>
+            <li>✅ Doubt Clearing (Unlimited)</li>
+            <li>✅ Dedicated Mentor</li>
+            <li>✅ Monthly Parent Reports</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline btn-block">Subscribe</a>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 8: TESTIMONIALS SECTION
+       PURPOSE: Student reviews / social proof
+       Auto-rotating carousel
+       ════════════════════════════════════════ -->
+  <section class="testimonials-section" id="testimonials">
+    <div class="container">
+      <div class="section-header">
+        <span class="section-tag">Student Stories</span>
+        <h2 class="section-title">What Our <span class="highlight">Students</span> Say</h2>
+      </div>
+
+      <!-- Carousel wrapper -->
+      <div class="testimonial-carousel">
+        <div class="testimonial-track" id="testimonialTrack">
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"EdSpark completely changed my approach to studying. I went from barely passing to scoring 92% in boards. The mentors are incredibly patient!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">A</div>
+              <div>
+                <strong>Aditya Sharma</strong>
+                <span>Class 10, CBSE — Delhi</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"The subscription model is brilliant! I enrolled only for Physics and Maths, which saved me money. Got into RV College for Engineering!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">P</div>
+              <div>
+                <strong>Priya Nair</strong>
+                <span>Class 12, CBSE — Bengaluru</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Home schooling through EdSpark was the best decision for our family. My daughter studies at her own pace and is thriving."</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">R</div>
+              <div>
+                <strong>Rekha Menon</strong>
+                <span>Parent — Kerala</span>
+              </div>
+            </div>
+          </div>
+
+          <div class="testimonial-card">
+            <div class="stars">⭐⭐⭐⭐⭐</div>
+            <p class="testimonial-text">"Cleared NTSE Stage 2 with EdSpark's competitive exam coaching. The mock tests are super realistic!"</p>
+            <div class="testimonial-author">
+              <div class="author-avatar">K</div>
+              <div>
+                <strong>Karan Mehta</strong>
+                <span>Class 10, State Board — Pune</span>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Navigation dots -->
+        <div class="carousel-dots" id="carouselDots"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 9: CONTACT SECTION
+       PURPOSE: Form for students/parents to
+       book a demo class or ask questions
+       ════════════════════════════════════════ -->
+  <section class="contact-section" id="contact">
+    <div class="container">
+      <div class="contact-wrapper">
+
+        <!-- Left: Contact Info -->
+        <div class="contact-info animate-on-scroll">
+          <span class="section-tag">Get In Touch</span>
+          <h2 class="section-title">Book a <span class="highlight">Free Demo</span></h2>
+          <p>Fill in your details and our team will call you within 24 hours to schedule your free demo class.</p>
+
+          <div class="contact-details">
+            <div class="contact-item">
+              <span class="contact-icon">📧</span>
+              <span><a href="mailto: info@edspark.in">info@edspark.in</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">📞</span>
+              <span><a href="tel: +91 9876543210">+91 98765 43210</a></span>
+            </div>
+            <div class="contact-item">
+              <span class="contact-icon">🕘</span>
+              <span>Mon – Sat, 9 AM – 7 PM</span>
+            </div>
+          </div>
+
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn"><img src="https://img.icons8.com/?size=100&id=z657ovoGgS2o&format=png&color=000000"  alt=""> Facebook</a>
+            <a href="https://instagram.com" class="social-btn"><img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt=""> Instagram</a>
+            <a href="https://www.linkedin.com/in/" class="social-btn"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt="">LinkedIn</a>
+            <a href="https://www.youtube.com/watch?v=" class="social-btn"><img src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000" alt="">Youtube</a> 
+        </div>
+        </div>
+
+        <!-- Right: Contact Form -->
+        <div class="contact-form-wrapper animate-on-scroll delay-1">
+          <!-- IMPORTANT: action="#" means form submits to itself (no real server) -->
+          <!-- In real project, you'd use a backend URL here -->
+          <form class="contact-form" id="contactForm" action="#" method="POST" novalidate>
+
+            <div class="form-group">
+              <label for="name">Student / Parent Name *</label>
+              <!-- input: collects text. required = must be filled before submit -->
+              <input type="text" id="name" name="name" placeholder="Enter full name" required>
+              <span class="error-msg" id="nameError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="email">Email Address *</label>
+              <input type="email" id="email" name="email" placeholder="your@email.com" required>
+              <span class="error-msg" id="emailError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number *</label>
+              <input type="tel" id="phone" name="phone" placeholder="+91 XXXXX XXXXX" required>
+              <span class="error-msg" id="phoneError"></span>
+            </div>
+
+            <div class="form-group">
+              <label for="grade">Grade / Class</label>
+              <!-- select: creates a dropdown -->
+              <select id="grade" name="grade">
+                <option value="">Select Grade</option>
+                <option value="8">Grade 8</option>
+                <option value="9">Grade 9</option>
+                <option value="10">Grade 10</option>
+                <option value="11">Grade 11</option>
+                <option value="12">Grade 12</option>
+                <option value="home">Home Schooling</option>
+                <option value="competitive">Competitive Exams</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="message">Message (Optional)</label>
+              <!-- textarea: multi-line text input -->
+              <textarea id="message" name="message" rows="3" placeholder="Any specific subjects or doubts?"></textarea>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-large">
+              📅 Book My Free Demo Class
+            </button>
+
+            <!-- Success message (hidden by default, shown by JS) -->
+            <div class="form-success" id="formSuccess">
+              🎉 Thank you! We'll contact you within 24 hours.
+            </div>
+
+          </form>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════════════════════════════════
+       BLOCK 10: FOOTER
+       PURPOSE: Bottom of every page
+       Shows links, copyright info
+       ════════════════════════════════════════ -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+
+        <!-- Footer Col 1: Brand info -->
+        <div class="footer-col">
+          <div class="footer-logo">
+            <span>⚡</span> Ed<span class="logo-accent">Spark</span>
+          </div>
+          <p class="footer-tagline">Empowering students across India with quality online education since 2020.</p>
+          <div class="social-links">
+            <a href="https://facebook.com" class="social-btn small"><img src="https://img.icons8.com/?size=100&id=z657ovoGgS2o&format=png&color=000000"  alt=""></a>
+            <a href="https://instagram.com" class="social-btn small"><img src="https://img.icons8.com/?size=100&id=BrU2BBoRXiWq&format=png&color=000000" alt=""></a>
+            <a href="https://www.linkedin.com/in/" class="social-btn small"><img src="https://img.icons8.com/?size=100&id=13930&format=png&color=000000" alt=""></a>
+            <a href="https://youtube.com" class="social-btn small"><img src="https://img.icons8.com/?size=100&id=9a46bTk3awwI&format=png&color=000000" alt=""></a>
+
+         
+          </div>
+        </div>
+
+        <!-- Footer Col 2: Quick Links -->
+        <div class="footer-col">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#courses">Courses</a></li>
+            <li><a href="#subscription">Subscription</a></li>
+            <li><a href="#homeschool">Home Schooling</a></li>
+            <li><a href="#about">About Us</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 3: Courses -->
+        <div class="footer-col">
+          <h4>Courses</h4>
+          <ul class="footer-links">
+            <li><a href="#courses">Grade 8 – 10</a></li>
+            <li><a href="#courses">Grade 11 – 12</a></li>
+            <li><a href="#courses">JEE / NEET</a></li>
+            <li><a href="#courses">NTSE / Olympiad</a></li>
+            <li><a href="#courses">KCET Prep</a></li>
+          </ul>
+        </div>
+
+        <!-- Footer Col 4: Contact -->
+        <div class="footer-col">
+          <h4>Contact</h4>
+          <ul class="footer-links">
+            <li><a href="https://www.google.com/maps/place/Innov8+Coworking+Space+Mantri+Bellandur+Outer+Ring+Road/@12.9304256,77.6851449,17z/data=!3m1!4b1!4m6!3m5!1s0x3bae13368deffa8d:0xdafe9440fc5ca6e0!8m2!3d12.9321405!4d77.6836643!16s%2Fg%2F11y7b13ktm?entry=ttu&g_ep=EgoyMDI2MDQyOS4wIKXMDSoASAFQAw%3D%3D" target="_blank">📍Innov8 Mantri 5th Floor, Bellandur ORR, Bengaluru 560103</a></li>
+            <li><a href="mailto: info@edspark.in" target="_blank">📧 info@edspark.in</a></li>
+            <li><a href="tel: +91 98765 43210" target="_blank">📞 +91 98765 43210</a></li>
+            </ul>
+        </div>
+
+      </div>
+
+      <!-- Bottom bar: copyright line -->
+      <div class="footer-bottom">
+        <p>© 2026 Edspark. All rights reserved. Built with ❤️ for students across India.</p>
+        <p>Inspired by <a href="https://theedtraining.com" target="_blank">TheEdTraining.com</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ═══════════════════════════════════════
+       BACK TO TOP BUTTON
+       PURPOSE: Floating button to scroll up
+       Only visible after scrolling down 300px
+       ════════════════════════════════════════ -->
+  <button class="back-to-top" id="backToTop" aria-label="Back to top">↑</button>
+
+  <!-- ══════════════════════════════════════
+       JAVASCRIPT FILES — loaded at the END
+       (Always load JS at end of body for speed)
+       ══════════════════════════════════════ -->
+  <script src="js/main.js"></script>
+  <script src="js/animations.js"></script>
+  <script src="js/form.js"></script>
+
+</body>
+</html>

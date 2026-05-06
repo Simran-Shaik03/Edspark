@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Competitive Exams — EdSpark</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Ed<span class="logo-accent">Spark</span></span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#courses" class="nav-link active">Courses</a></li>
+      <li><a href="index.html#subscription" class="nav-link">Subscription</a></li>
+      <li><a href="index.html#homeschool" class="nav-link">Home Schooling</a></li>
+      <li><a href="index.html#about" class="nav-link">About Us</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary nav-cta">Get Demo Class</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="course-page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &rsaquo;
+        <a href="index.html#courses">Courses</a> &rsaquo;
+        <span>Competitive Exams</span>
+      </div>
+      <span class="course-badge-label" style="background:#D97706;">Premium</span>
+      <h1 class="course-page-title">Competitive <span class="highlight">Exams</span></h1>
+      <p class="course-page-boards">JEE • NEET • NTSE • Olympiad • KCET — Rigorous Training & Strategy Sessions</p>
+    </div>
+  </section>
+
+  <!-- EXAM TABS -->
+  <section class="course-subjects-section">
+    <div class="container">
+
+      <!-- Exam selector -->
+      <div class="stream-tabs">
+        <button class="stream-tab active" onclick="showStream('jee', this)">⚙️ JEE</button>
+        <button class="stream-tab" onclick="showStream('neet', this)">🧬 NEET</button>
+        <button class="stream-tab" onclick="showStream('ntse', this)">🏆 NTSE / Olympiad</button>
+        <button class="stream-tab" onclick="showStream('kcet', this)">📝 KCET</button>
+      </div>
+
+      <!-- JEE -->
+      <div class="stream-content" id="stream-jee">
+        <div class="exam-info-banner">
+          <div class="exam-info-item"><span>🎯</span><div><strong>Target</strong><p>IITs, NITs, IIITs</p></div></div>
+          <div class="exam-info-item"><span>📅</span><div><strong>Duration</strong><p>12 – 24 Months</p></div></div>
+          <div class="exam-info-item"><span>📚</span><div><strong>Classes/Week</strong><p>5 – 6 Classes</p></div></div>
+          <div class="exam-info-item"><span>🧪</span><div><strong>Mock Tests</strong><p>Weekly Full Tests</p></div></div>
+        </div>
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="Physics JEE" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Physics <span class="subject-sub">– JEE Mains & Advanced</span></h3>
+              <p>Complete JEE syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Weekly Mock Tests (JEE pattern)</li>
+                <li>Previous 10 Year Papers</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Chemistry JEE" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Chemistry <span class="subject-sub">– JEE Mains & Advanced</span></h3>
+              <p>Complete JEE syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Weekly Mock Tests (JEE pattern)</li>
+                <li>Inorganic + Organic focus</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Maths JEE" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Mathematics <span class="subject-sub">– JEE Mains & Advanced</span></h3>
+              <p>Complete JEE syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Weekly Mock Tests (JEE pattern)</li>
+                <li>Integration, Coordinate, Vectors</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- NEET -->
+      <div class="stream-content" id="stream-neet" style="display:none;">
+        <div class="exam-info-banner">
+          <div class="exam-info-item"><span>🎯</span><div><strong>Target</strong><p>MBBS, BDS, AIIMS</p></div></div>
+          <div class="exam-info-item"><span>📅</span><div><strong>Duration</strong><p>12 – 24 Months</p></div></div>
+          <div class="exam-info-item"><span>📚</span><div><strong>Classes/Week</strong><p>5 – 6 Classes</p></div></div>
+          <div class="exam-info-item"><span>🧪</span><div><strong>Mock Tests</strong><p>Weekly Full Tests</p></div></div>
+        </div>
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="Physics NEET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Physics <span class="subject-sub">– NEET</span></h3>
+              <p>Complete NEET syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Weekly Mock Tests (NEET pattern)</li>
+                <li>Previous 10 Year Papers</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Chemistry NEET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Chemistry <span class="subject-sub">– NEET</span></h3>
+              <p>Complete NEET syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Weekly Mock Tests (NEET pattern)</li>
+                <li>NCERT based deep coverage</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&q=80" alt="Biology NEET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Biology <span class="subject-sub">– Botany & Zoology</span></h3>
+              <p>Complete NEET syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Weekly Mock Tests (NEET pattern)</li>
+                <li>Diagram + theory focus</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- NTSE / OLYMPIAD -->
+      <div class="stream-content" id="stream-ntse" style="display:none;">
+        <div class="exam-info-banner">
+          <div class="exam-info-item"><span>🎯</span><div><strong>Target</strong><p>NTSE, IMO, NSO, KCET</p></div></div>
+          <div class="exam-info-item"><span>📅</span><div><strong>Duration</strong><p>6 – 12 Months</p></div></div>
+          <div class="exam-info-item"><span>📚</span><div><strong>Classes/Week</strong><p>3 – 4 Classes</p></div></div>
+          <div class="exam-info-item"><span>🧪</span><div><strong>Mock Tests</strong><p>Bi-weekly Tests</p></div></div>
+        </div>
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="MAT" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Mental Ability (MAT)</h3>
+              <p>NTSE Stage 1 & 2 –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Reasoning & Aptitude</li>
+                <li>Series, Analogy, Coding</li>
+                <li>Full mock test series</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="SAT Science" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Scholastic Aptitude (SAT) <span class="subject-sub">– Science</span></h3>
+              <p>NTSE Stage 1 & 2 –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Physics, Chemistry, Biology</li>
+                <li>NCERT based questions</li>
+                <li>Full mock test series</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&q=80" alt="SAT Social" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Scholastic Aptitude (SAT) <span class="subject-sub">– Social Science</span></h3>
+              <p>NTSE Stage 1 & 2 –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>History, Geography, Civics</li>
+                <li>NCERT based questions</li>
+                <li>Full mock test series</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- KCET -->
+      <div class="stream-content" id="stream-kcet" style="display:none;">
+        <div class="exam-info-banner">
+          <div class="exam-info-item"><span>🎯</span><div><strong>Target</strong><p>Karnataka Engineering & Medical</p></div></div>
+          <div class="exam-info-item"><span>📅</span><div><strong>Duration</strong><p>12 Months</p></div></div>
+          <div class="exam-info-item"><span>📚</span><div><strong>Classes/Week</strong><p>4 – 5 Classes</p></div></div>
+          <div class="exam-info-item"><span>🧪</span><div><strong>Mock Tests</strong><p>Weekly Full Tests</p></div></div>
+        </div>
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="Physics KCET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Physics <span class="subject-sub">– KCET</span></h3>
+              <p>Complete Karnataka PUC syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>KCET pattern mock tests</li>
+                <li>Previous year KCET papers</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Chemistry KCET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Chemistry <span class="subject-sub">– KCET</span></h3>
+              <p>Complete Karnataka PUC syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>KCET pattern mock tests</li>
+                <li>Previous year KCET papers</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Maths KCET" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Mathematics <span class="subject-sub">– KCET</span></h3>
+              <p>Complete Karnataka PUC syllabus –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>KCET pattern mock tests</li>
+                <li>Previous year KCET papers</li>
+                <li>1-on-1 Doubt Sessions</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="course-page-cta">
+        <a href="index.html#contact" class="btn btn-primary btn-large">📅 Book a Demo Class Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 EdSpark. All rights reserved. Built with ❤️ for students across India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showStream(stream, btn) {
+      var all = document.querySelectorAll('.stream-content');
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.display = 'none';
+      }
+      var tabs = document.querySelectorAll('.stream-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      document.getElementById('stream-' + stream).style.display = 'block';
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

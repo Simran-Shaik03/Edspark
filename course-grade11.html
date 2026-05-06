@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Grade 11–12 / PUC — EdSpark</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Nunito:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/animations.css">
+</head>
+<body>
+
+  <!-- NAVBAR -->
+  <nav class="navbar" id="navbar">
+    <div class="nav-logo">
+      <span class="logo-icon">⚡</span>
+      <span class="logo-text">Ed<span class="logo-accent">Spark</span></span>
+    </div>
+    <div class="hamburger" id="hamburger">
+      <span></span><span></span><span></span>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html" class="nav-link">Home</a></li>
+      <li><a href="index.html#courses" class="nav-link active">Courses</a></li>
+      <li><a href="index.html#subscription" class="nav-link">Subscription</a></li>
+      <li><a href="index.html#homeschool" class="nav-link">Home Schooling</a></li>
+      <li><a href="index.html#about" class="nav-link">About Us</a></li>
+      <li><a href="index.html#contact" class="nav-link">Contact</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="theme-toggle" id="themeToggle">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+      </button>
+      <a href="index.html#contact" class="btn btn-primary nav-cta">Get Demo Class</a>
+    </div>
+  </nav>
+
+  <!-- PAGE HERO -->
+  <section class="course-page-hero">
+    <div class="container">
+      <div class="breadcrumb">
+        <a href="index.html">Home</a> &rsaquo;
+        <a href="index.html#courses">Courses</a> &rsaquo;
+        <span>Grade 11 – 12 / PUC</span>
+      </div>
+      <span class="course-badge-label" style="background:#7C3AED;">New Batch</span>
+      <h1 class="course-page-title">Grade 11 – 12 / <span class="highlight">PUC</span></h1>
+      <p class="course-page-boards">Science, Commerce & Arts — CBSE, ICSE, Karnataka PUC & Maharashtra Boards</p>
+    </div>
+  </section>
+
+  <!-- STREAM TABS -->
+  <section class="course-subjects-section">
+    <div class="container">
+
+      <!-- Stream selector -->
+      <div class="stream-tabs">
+        <button class="stream-tab active" onclick="showStream('science', this)">🔬 Science (PCM / PCB)</button>
+        <button class="stream-tab" onclick="showStream('commerce', this)">📊 Commerce</button>
+        <button class="stream-tab" onclick="showStream('arts', this)">🎨 Arts / Humanities</button>
+      </div>
+
+      <!-- SCIENCE STREAM -->
+      <div class="stream-content" id="stream-science">
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1636466497217-26a8cbeaf0aa?w=500&q=80" alt="Physics" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Physics</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Pattern Papers</li>
+                <li>JEE / NEET concept alignment</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1532187863486-abf9dbad1b69?w=500&q=80" alt="Chemistry" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Chemistry</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Pattern Papers</li>
+                <li>Organic, Inorganic & Physical Chemistry</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Mathematics" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Mathematics</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Pattern Papers</li>
+                <li>Calculus, Algebra, Trigonometry</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1576086213369-97a306d36557?w=500&q=80" alt="Biology" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Biology <span class="subject-sub">– PCB Stream</span></h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + NEET pattern</li>
+                <li>Botany + Zoology covered</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80" alt="English" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>English</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests</li>
+                <li>Essay, Grammar & Literature</li>
+                <li>Board exam preparation</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?w=500&q=80" alt="Computer Science" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Computer Science <span class="subject-sub">– Optional</span></h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests</li>
+                <li>Python, C++, Data Structures</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- COMMERCE STREAM -->
+      <div class="stream-content" id="stream-commerce" style="display:none;">
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1554224155-6726b3ff858f?w=500&q=80" alt="Accountancy" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Accountancy</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Partnership, Company Accounts</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1611974789855-9c2a0a7236a3?w=500&q=80" alt="Business Studies" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Business Studies</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Management, Marketing, Finance</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Economics" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Economics</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 3 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Micro & Macro Economics</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Mathematics" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Mathematics <span class="subject-sub">– Optional</span></h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests</li>
+                <li>Statistics & Applied Maths</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80" alt="English" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>English</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests</li>
+                <li>Essay, Grammar & Literature</li>
+                <li>Board exam preparation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- ARTS STREAM -->
+      <div class="stream-content" id="stream-arts" style="display:none;">
+        <div class="subjects-grid">
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="History" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>History</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Ancient, Medieval & Modern India</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1524661135-423995f22d0b?w=500&q=80" alt="Geography" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Geography</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Physical & Human Geography</li>
+                <li>Map work included</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1529107386315-e1a2ed48a620?w=500&q=80" alt="Political Science" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Political Science</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Indian Constitution & World Politics</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1509062522246-3755977927d7?w=500&q=80" alt="Economics" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>Economics</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests + Board Papers</li>
+                <li>Micro & Macro Economics</li>
+                <li>Full syllabus completion</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="subject-card">
+            <div class="subject-img-wrapper">
+              <img src="https://images.unsplash.com/photo-1546410531-bb4caa6b424d?w=500&q=80" alt="English" loading="lazy">
+            </div>
+            <div class="subject-body">
+              <h3>English</h3>
+              <p>All the chapters and streams –</p>
+              <ul class="subject-points">
+                <li>Weekly 2 Classes</li>
+                <li>Monthly Tests</li>
+                <li>Essay, Grammar & Literature</li>
+                <li>Board exam preparation</li>
+              </ul>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- CTA -->
+      <div class="course-page-cta">
+        <a href="index.html#contact" class="btn btn-primary btn-large">📅 Book a Demo Class Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 EdSpark. All rights reserved. Built with ❤️ for students across India.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="js/main.js"></script>
+  <script>
+    function showStream(stream, btn) {
+      // Hide all stream content
+      var all = document.querySelectorAll('.stream-content');
+      for (var i = 0; i < all.length; i++) {
+        all[i].style.display = 'none';
+      }
+      // Remove active from all tabs
+      var tabs = document.querySelectorAll('.stream-tab');
+      for (var i = 0; i < tabs.length; i++) {
+        tabs[i].classList.remove('active');
+      }
+      // Show selected stream
+      document.getElementById('stream-' + stream).style.display = 'block';
+      btn.classList.add('active');
+    }
+  </script>
+
+</body>
+</html>

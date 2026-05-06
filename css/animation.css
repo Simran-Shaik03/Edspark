@@ -1,0 +1,304 @@
+/*
+  ╔══════════════════════════════════════════════════════════════╗
+  ║              animations.css — All Animations                 ║
+  ║   PURPOSE: Separate file just for animation & transition     ║
+  ║   styles. Keeping animations separate = cleaner code!        ║
+  ╚══════════════════════════════════════════════════════════════╝
+
+  WHAT IS A CSS ANIMATION?
+  → Makes elements move, fade, grow, rotate over time.
+  → Uses @keyframes to define the steps of movement.
+  → Uses animation property to apply the keyframes.
+
+  SYNTAX:
+  @keyframes animationName {
+    from { property: startValue; }
+    to   { property: endValue; }
+  }
+  OR with percentages:
+  @keyframes animationName {
+    0%   { property: startValue; }
+    50%  { property: midValue; }
+    100% { property: endValue; }
+  }
+*/
+
+/* ═══════════════════════════════════════════════════════
+   PAGE LOAD ANIMATIONS
+   These play once when the page loads
+   ═══════════════════════════════════════════════════════ */
+
+/* Fade up from below */
+@keyframes fadeUp {
+  from {
+    opacity: 0;             /* Start invisible */
+    transform: translateY(30px); /* Start 30px below */
+  }
+  to {
+    opacity: 1;             /* End fully visible */
+    transform: translateY(0);   /* End at normal position */
+  }
+}
+
+/* Fade in (no movement, just appear) */
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+/* Scale in (grow from small to normal) */
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Slide in from left */
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Slide in from right */
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* Pulse / Heartbeat effect */
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50%       { transform: scale(1.05); }
+}
+
+/* Shimmer effect (loading skeleton) */
+@keyframes shimmer {
+  from { background-position: -200% center; }
+  to   { background-position: 200% center; }
+}
+
+/* Spin (rotate 360°) */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+/* Bounce */
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  25%       { transform: translateY(-12px); }
+  75%       { transform: translateY(-6px); }
+}
+
+/* ═══════════════════════════════════════════════════════
+   UTILITY ANIMATION CLASSES
+   Apply these classes in HTML to trigger animations
+   ═══════════════════════════════════════════════════════ */
+
+/*
+  animate-fadeup: Used on hero section elements
+  animation: name | duration | timing-function | delay | fill-mode
+  fill-mode: 'both' = apply start state BEFORE animation too
+*/
+.animate-fadeup {
+  animation: fadeUp 0.7s ease both;
+}
+
+.animate-fadein {
+  animation: fadeIn 0.7s ease both;
+}
+
+/* Delay classes — stagger animations one after another */
+.delay-1 { animation-delay: 0.2s; }
+.delay-2 { animation-delay: 0.4s; }
+.delay-3 { animation-delay: 0.6s; }
+.delay-4 { animation-delay: 0.8s; }
+
+/* ═══════════════════════════════════════════════════════
+   SCROLL-TRIGGERED ANIMATIONS
+   These elements START invisible, then animate IN
+   when the user scrolls them into view (handled by JS)
+   ═══════════════════════════════════════════════════════ */
+
+/*
+  .animate-on-scroll — element starts invisible
+  When JS detects element is visible, it adds .is-visible class
+  Then the animation plays
+*/
+.animate-on-scroll {
+  opacity: 0;
+  transform: translateY(40px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+
+.animate-on-scroll.delay-1 {
+  transition-delay: 0.15s;
+}
+.animate-on-scroll.delay-2 {
+  transition-delay: 0.30s;
+}
+.animate-on-scroll.delay-3 {
+  transition-delay: 0.45s;
+}
+
+/* When .is-visible is added by JS: animate in */
+.animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* ═══════════════════════════════════════════════════════
+   HOVER MICRO-INTERACTIONS
+   Small animations on hover for better feel
+   ═══════════════════════════════════════════════════════ */
+
+/* Wiggle on hover (for icons/emoji) */
+.hover-wiggle:hover {
+  animation: wiggle 0.5s ease;
+}
+
+@keyframes wiggle {
+  0%, 100% { transform: rotate(0deg); }
+  25%       { transform: rotate(-10deg); }
+  75%       { transform: rotate(10deg); }
+}
+
+/* Bounce on hover */
+.hover-bounce:hover {
+  animation: bounce 0.6s ease;
+}
+
+/* ═══════════════════════════════════════════════════════
+   LOADING SPINNER
+   Used when form is submitting
+   ═══════════════════════════════════════════════════════ */
+.spinner {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  border: 3px solid rgba(255,255,255,0.3);
+  border-top-color: #FFFFFF;
+  border-radius: 50%;
+  animation: spin 0.7s linear infinite; /* infinite = loops forever */
+}
+
+/* ═══════════════════════════════════════════════════════
+   RIPPLE EFFECT on buttons
+   When you click a button, a ripple spreads outward
+   ═══════════════════════════════════════════════════════ */
+@keyframes ripple {
+  to {
+    transform: scale(4);
+    opacity: 0;
+  }
+}
+
+.ripple-effect {
+  position: absolute;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  width: 10px;
+  height: 10px;
+  transform: scale(0);
+  animation: ripple 0.6s linear;
+  pointer-events: none;
+}
+
+/* ═══════════════════════════════════════════════════════
+   NUMBER COUNTER ANIMATION
+   For the stats (5000+, 50+, 95%)
+   The numbers "count up" from 0 to their final value
+   (Controlled by JavaScript, styled here)
+   ═══════════════════════════════════════════════════════ */
+.stat-number {
+  display: inline-block;
+  transition: all var(--transition-slow);
+}
+
+/* ═══════════════════════════════════════════════════════
+   NAVBAR SCROLL ANIMATION
+   Navbar shrinks slightly when scrolling down
+   ═══════════════════════════════════════════════════════ */
+.navbar {
+  transition: box-shadow 0.3s ease, background 0.3s ease;
+}
+
+/* ═══════════════════════════════════════════════════════
+   DARK MODE TRANSITION
+   When toggling dark/light mode, colors fade smoothly
+   ═══════════════════════════════════════════════════════ */
+body, .navbar, .value-card, .course-card, .plan-card,
+.contact-form-wrapper, .testimonial-card {
+  transition: background-color 0.4s ease, border-color 0.4s ease,
+              color 0.4s ease, box-shadow 0.4s ease;
+}
+
+/* ═══════════════════════════════════════════════════════
+   LINK UNDERLINE ANIMATION
+   For footer/nav links: underline grows on hover
+   ═══════════════════════════════════════════════════════ */
+.animated-underline {
+  position: relative;
+  display: inline-block;
+}
+
+.animated-underline::after {
+  content: '';
+  position: absolute;
+  width: 0;        /* Start with 0 width (invisible) */
+  height: 2px;
+  bottom: -2px;
+  left: 0;
+  background: var(--color-primary);
+  transition: width var(--transition-normal);
+}
+
+.animated-underline:hover::after {
+  width: 100%;     /* Grow to full width on hover */
+}
+
+/* ═══════════════════════════════════════════════════════
+   GLOW EFFECT for featured elements
+   ═══════════════════════════════════════════════════════ */
+@keyframes glow {
+  0%, 100% {
+    box-shadow: 0 0 20px rgba(29, 78, 216, 0.3);
+  }
+  50% {
+    box-shadow: 0 0 40px rgba(29, 78, 216, 0.6);
+  }
+}
+
+.plan-featured {
+  animation: glow 3s ease-in-out infinite;
+}
+
+/* ═══════════════════════════════════════════════════════
+   STAGGER ENTRANCE ANIMATION for cards
+   Each card fades in with a slight delay from previous
+   ═══════════════════════════════════════════════════════ */
+.values-grid .value-card:nth-child(1) { transition-delay: 0.0s; }
+.values-grid .value-card:nth-child(2) { transition-delay: 0.1s; }
+.values-grid .value-card:nth-child(3) { transition-delay: 0.2s; }
+.values-grid .value-card:nth-child(4) { transition-delay: 0.3s; }
+
+.courses-grid .course-card:nth-child(1) { transition-delay: 0.0s; }
+.courses-grid .course-card:nth-child(2) { transition-delay: 0.15s; }
+.courses-grid .course-card:nth-child(3) { transition-delay: 0.3s; }
